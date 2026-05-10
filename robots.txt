@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dac-engineering.github.io/sitemap.xml

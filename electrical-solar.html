@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electrical & Solar Infrastructure | Digital Automation Control (DAC)</title>
+    <meta name="description" content="MV/LV Electrical Infrastructure and Solar EPC Construction. Expertise in 36kV/3.3kV cable terminations, switchgear, and utility-scale solar farms.">
+    <meta name="google-site-verification" content="PLACEHOLDER_FOR_GSC_CODE" />
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { navy: '#002147', silver: '#C0C0C0', orange: { DEFAULT: '#FF8C00', 500: '#FF8C00', 600: '#E67E00' } }, fontFamily: { sans: ['Inter', 'sans-serif'] } } } }
+    </script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center gap-2 group">
+                        <div class="bg-navy p-2 rounded-lg group-hover:bg-orange transition-colors duration-300">
+                            <i data-lucide="cpu" class="text-white w-8 h-8"></i>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="font-bold text-xl text-navy leading-tight tracking-tight">DAC</span>
+                            <span class="text-[0.65rem] text-slate-500 uppercase tracking-widest font-semibold">Engineering</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <div class="relative group">
+                        <button class="nav-link active flex items-center gap-1 py-2 focus:outline-none">
+                            Solutions <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-hover:rotate-180"></i>
+                        </button>
+                        <div class="absolute left-0 mt-0 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left -translate-y-2 group-hover:translate-y-0">
+                            <div class="py-1">
+                                <a href="automation.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-slate-50 hover:text-navy hover:pl-6 transition-all border-l-2 border-transparent hover:border-orange">Automation & Control</a>
+                                <a href="electrical-solar.html" class="block px-4 py-3 text-sm text-navy bg-slate-50 font-semibold border-l-2 border-orange">Electrical & Solar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="projects.html" class="nav-link">Projects</a>
+                    <a href="contact.html" class="bg-navy text-white px-5 py-2.5 rounded-md font-medium hover:bg-orange transition-colors shadow-sm inline-flex items-center gap-2">
+                        <i data-lucide="phone" class="w-4 h-4"></i> Contact Us
+                    </a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-navy p-2"><i data-lucide="menu" class="w-6 h-6"></i></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="bg-navy py-16 text-white border-b-4 border-orange relative overflow-hidden">
+        <div class="absolute right-0 top-0 opacity-10 pointer-events-none">
+            <i data-lucide="zap" class="w-96 h-96 -mt-10 -mr-10"></i>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex items-center gap-3 mb-4 text-orange font-semibold">
+                <i data-lucide="zap" class="w-6 h-6"></i> Solutions
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Electrical & Solar Infrastructure</h1>
+            <p class="text-xl text-slate-300 max-w-2xl">High-voltage electrical integration and turnkey Solar EPC services for utility-scale power generation.</p>
+        </div>
+    </header>
+
+    <main class="flex-grow py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
+            
+            <!-- Electrical Section -->
+            <section>
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-navy mb-4">MV/LV Electrical Systems</h2>
+                    <p class="text-slate-600 max-w-2xl mx-auto text-lg">Comprehensive installation, testing, and commissioning of critical power distribution infrastructure.</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-100 border-t-4 border-t-navy hover:-translate-y-1 transition-transform">
+                        <i data-lucide="cable" class="w-10 h-10 text-orange mb-4"></i>
+                        <h3 class="text-xl font-bold text-navy mb-3">Cable Management (V6)</h3>
+                        <p class="text-slate-600 text-sm">Specialists in 36kV and 3.3kV high-voltage power cable terminations, splicing, and fiber optic integration within complex industrial environments.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-100 border-t-4 border-t-navy hover:-translate-y-1 transition-transform">
+                        <i data-lucide="box" class="w-10 h-10 text-orange mb-4"></i>
+                        <h3 class="text-xl font-bold text-navy mb-3">Switchgear & MCC</h3>
+                        <p class="text-slate-600 text-sm">End-to-end installation and commissioning of MV Switchgear, LV Switchboards, and intelligent Motor Control Centers (MCC).</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-100 border-t-4 border-t-navy hover:-translate-y-1 transition-transform">
+                        <i data-lucide="activity" class="w-10 h-10 text-orange mb-4"></i>
+                        <h3 class="text-xl font-bold text-navy mb-3">Transformer Testing</h3>
+                        <p class="text-slate-600 text-sm">Rigorous validation protocols including Insulation Resistance, Turns Ratio, Vector Group analysis, and Magnetic Balance testing.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Solar EPC Section -->
+            <section id="solar" class="bg-slate-900 text-white rounded-3xl overflow-hidden shadow-2xl">
+                <div class="grid lg:grid-cols-2">
+                    <div class="p-12 lg:p-16 flex flex-col justify-center relative">
+                        <div class="absolute top-0 right-0 p-8 opacity-10">
+                            <i data-lucide="sun" class="w-32 h-32 text-orange"></i>
+                        </div>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6 relative z-10">Solar EPC Capabilities</h2>
+                        <p class="text-slate-300 text-lg mb-8 relative z-10">
+                            We deliver complete Engineering, Procurement, and Construction (EPC) services for ground-mounted and rooftop solar farms. Our solutions encompass on-grid, off-grid, and hybrid power plants optimized for maximum yield.
+                        </p>
+                        
+                        <div class="space-y-6 relative z-10">
+                            <div class="bg-white/10 p-6 rounded-xl border border-white/20 backdrop-blur-sm border-l-4 border-l-orange">
+                                <h4 class="text-orange font-bold text-sm uppercase tracking-wider mb-2">Flagship Project Highlight</h4>
+                                <h3 class="text-2xl font-bold text-white mb-2">120MW Aden Solar Power Plant</h3>
+                                <p class="text-slate-300 text-sm mb-4">In partnership with MASDAR and EMC.</p>
+                                <ul class="space-y-2 text-sm text-slate-200">
+                                    <li class="flex items-center gap-2"><i data-lucide="check" class="text-orange w-4 h-4"></i> Termination of 36kV/3.3kV cables.</li>
+                                    <li class="flex items-center gap-2"><i data-lucide="check" class="text-orange w-4 h-4"></i> Full MV substation equipment installation.</li>
+                                    <li class="flex items-center gap-2"><i data-lucide="check" class="text-orange w-4 h-4"></i> Grid integration and synchronization.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative h-96 lg:h-auto">
+                        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&q=80&w=1000" alt="Solar Farm" class="absolute inset-0 w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-l from-transparent to-slate-900/90"></div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
+                        <i data-lucide="cpu" class="text-orange w-8 h-8"></i>
+                        <span class="font-bold text-2xl text-white tracking-tight">DAC <span class="text-sm text-slate-400 font-normal uppercase tracking-widest">Engineering</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

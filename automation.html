@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automation & Control | Digital Automation Control (DAC)</title>
+    <meta name="description" content="Expertise in DCS, SCADA, and PLC integration. Compliant with IEC 61131, ISA101, and ISA18.2 standards. Specialists in custom control panel building.">
+    <meta name="google-site-verification" content="PLACEHOLDER_FOR_GSC_CODE" />
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { navy: '#002147', silver: '#C0C0C0', orange: { DEFAULT: '#FF8C00', 500: '#FF8C00', 600: '#E67E00' } }, fontFamily: { sans: ['Inter', 'sans-serif'] } } } }
+    </script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center gap-2 group">
+                        <div class="bg-navy p-2 rounded-lg group-hover:bg-orange transition-colors duration-300">
+                            <i data-lucide="cpu" class="text-white w-8 h-8"></i>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="font-bold text-xl text-navy leading-tight tracking-tight">DAC</span>
+                            <span class="text-[0.65rem] text-slate-500 uppercase tracking-widest font-semibold">Engineering</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <div class="relative group">
+                        <button class="nav-link active flex items-center gap-1 py-2 focus:outline-none">
+                            Solutions <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-hover:rotate-180"></i>
+                        </button>
+                        <div class="absolute left-0 mt-0 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left -translate-y-2 group-hover:translate-y-0">
+                            <div class="py-1">
+                                <a href="automation.html" class="block px-4 py-3 text-sm text-navy bg-slate-50 font-semibold border-l-2 border-orange">Automation & Control</a>
+                                <a href="electrical-solar.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-slate-50 hover:text-navy hover:pl-6 transition-all border-l-2 border-transparent hover:border-orange">Electrical & Solar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="projects.html" class="nav-link">Projects</a>
+                    <a href="index.html#partners" class="nav-link">Partners</a>
+                    <a href="contact.html" class="bg-navy text-white px-5 py-2.5 rounded-md font-medium hover:bg-orange transition-colors shadow-sm inline-flex items-center gap-2">
+                        <i data-lucide="phone" class="w-4 h-4"></i> Contact Us
+                    </a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-navy p-2"><i data-lucide="menu" class="w-6 h-6"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="index.html" class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-navy">Home</a>
+                <a href="about.html" class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-navy">About</a>
+                <button id="solutions-dropdown-btn" class="w-full text-left flex justify-between items-center px-3 py-3 rounded-md text-base font-medium text-navy bg-slate-50">
+                    Solutions <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                </button>
+                <div id="solutions-dropdown" class="pl-6 pr-3 space-y-1 bg-slate-50/50 py-2">
+                    <a href="automation.html" class="block px-3 py-2 rounded-md text-sm font-bold text-orange">Automation & Control</a>
+                    <a href="electrical-solar.html" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-600 hover:text-orange">Electrical & Solar</a>
+                </div>
+                <a href="projects.html" class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-navy">Projects</a>
+                <a href="contact.html" class="block px-3 py-3 mt-4 rounded-md text-base font-medium bg-orange text-white text-center">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="bg-navy py-16 text-white border-b-4 border-orange relative overflow-hidden">
+        <div class="absolute right-0 top-0 opacity-10 pointer-events-none">
+            <i data-lucide="cpu" class="w-96 h-96 -mt-10 -mr-10"></i>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex items-center gap-3 mb-4 text-orange font-semibold">
+                <i data-lucide="monitor-dot" class="w-6 h-6"></i> Solutions
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Automation & Control</h1>
+            <p class="text-xl text-slate-300 max-w-2xl">Certified integration of DCS, SCADA, and PLC systems engineered to rigorous international standards.</p>
+        </div>
+    </header>
+
+    <main class="flex-grow py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
+            
+            <!-- Systems & Platforms -->
+            <section class="grid lg:grid-cols-2 gap-12 items-start">
+                <div>
+                    <h2 class="text-3xl font-bold text-navy mb-6">Platforms & Software</h2>
+                    <p class="text-slate-600 mb-8 text-lg">We provide end-to-end integration across leading industrial platforms, ensuring seamless communication and robust control architectures.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="mt-1 bg-slate-100 p-2 rounded text-navy"><i data-lucide="server" class="w-6 h-6"></i></div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-800">DCS, SCADA, PLC, ESD & FGS</h3>
+                                <p class="text-slate-600">Complete architecture design, programming, and commissioning for Distributed Control Systems and Safety Instrumented Systems.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="mt-1 bg-slate-100 p-2 rounded text-navy"><i data-lucide="code" class="w-6 h-6"></i></div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-800">Software Expertise</h3>
+                                <p class="text-slate-600">Proficiency in Foxboro, Delta-V, FactoryTalk, Simatic WinCC, Yokogawa, and Allen Bradley environments.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+                    <h3 class="text-xl font-bold text-navy mb-6 pb-4 border-b border-slate-100">Certified System Integration</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between p-4 bg-slate-50 rounded-lg">
+                            <span class="font-bold text-lg text-slate-700">Emerson</span>
+                            <i data-lucide="check-circle" class="text-green-500 w-6 h-6"></i>
+                        </div>
+                        <div class="flex items-center justify-between p-4 bg-slate-50 rounded-lg">
+                            <span class="font-bold text-lg text-slate-700">Rockwell Automation</span>
+                            <i data-lucide="check-circle" class="text-green-500 w-6 h-6"></i>
+                        </div>
+                        <div class="flex items-center justify-between p-4 bg-slate-50 rounded-lg">
+                            <span class="font-bold text-lg text-slate-700">Siemens</span>
+                            <i data-lucide="check-circle" class="text-green-500 w-6 h-6"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Standards & Compliance -->
+            <section class="bg-navy text-white rounded-3xl p-10 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-orange/20 rounded-full blur-3xl"></div>
+                <div class="relative z-10">
+                    <div class="text-center mb-10">
+                        <h2 class="text-3xl font-bold mb-4">Engineering Standards Compliance</h2>
+                        <p class="text-slate-300">All logic, HMIs, and alarm systems are built strictly to international guidelines.</p>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="bg-white/10 p-6 rounded-xl border border-white/20 backdrop-blur-sm">
+                            <div class="text-orange mb-4"><i data-lucide="file-code" class="w-8 h-8"></i></div>
+                            <h3 class="text-xl font-bold mb-2">IEC 61131</h3>
+                            <p class="text-sm text-slate-300">Standardized programmable controller programming languages and logic architectures.</p>
+                        </div>
+                        <div class="bg-white/10 p-6 rounded-xl border border-white/20 backdrop-blur-sm">
+                            <div class="text-orange mb-4"><i data-lucide="layout-dashboard" class="w-8 h-8"></i></div>
+                            <h3 class="text-xl font-bold mb-2">ISA101</h3>
+                            <p class="text-sm text-slate-300">High-performance HMI design ensuring situational awareness and operator efficiency.</p>
+                        </div>
+                        <div class="bg-white/10 p-6 rounded-xl border border-white/20 backdrop-blur-sm">
+                            <div class="text-orange mb-4"><i data-lucide="bell-ring" class="w-8 h-8"></i></div>
+                            <h3 class="text-xl font-bold mb-2">ISA18.2</h3>
+                            <p class="text-sm text-slate-300">Comprehensive Alarm Management to prevent operator overload during critical events.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Panel Engineering -->
+            <section class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="order-2 lg:order-1 bg-slate-200 rounded-2xl h-80 relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1544725121-be3bf52e2dc8?auto=format&fit=crop&q=80&w=1000" alt="Control Panel Wiring" class="object-cover w-full h-full opacity-90">
+                </div>
+                <div class="order-1 lg:order-2">
+                    <h2 class="text-3xl font-bold text-navy mb-4">Panel Engineering & Assembly</h2>
+                    <p class="text-slate-600 mb-6 text-lg">
+                        We don't just design software; we build the physical infrastructure. Our custom panel shop produces high-quality relay-based and PLC panels.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <div class="bg-orange/10 p-1 rounded text-orange"><i data-lucide="pen-tool" class="w-5 h-5"></i></div>
+                            <div>
+                                <strong class="text-slate-800 block">EPLAN & AutoCAD Documentation</strong>
+                                <span class="text-slate-600 text-sm">Precise schematics, 3D panel layouts, and complete BOM generation.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="bg-orange/10 p-1 rounded text-orange"><i data-lucide="zap" class="w-5 h-5"></i></div>
+                            <div>
+                                <strong class="text-slate-800 block">Rigorous Factory Acceptance Testing (FAT)</strong>
+                                <span class="text-slate-600 text-sm">Pre-deployment logic testing and loop checks to ensure zero-defect commissioning.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
+                        <i data-lucide="cpu" class="text-orange w-8 h-8"></i>
+                        <span class="font-bold text-2xl text-white tracking-tight">DAC <span class="text-sm text-slate-400 font-normal uppercase tracking-widest">Engineering</span></span>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="about.html" class="hover:text-orange transition-colors">About Us</a></li>
+                        <li><a href="automation.html" class="hover:text-orange transition-colors">Automation & Control</a></li>
+                        <li><a href="electrical-solar.html" class="hover:text-orange transition-colors">Electrical & Solar</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
